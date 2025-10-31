@@ -1,5 +1,5 @@
 ---
-title: "Hello World com VitePress"
+title: "Um retorno de quem não deveria ter ido"
 date: 2025-10-31
 description: "Primeiro post de teste do blog do Kastner"
 tags: ["vitepress", "blog"]
