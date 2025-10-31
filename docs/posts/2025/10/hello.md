@@ -42,3 +42,6 @@ Eu hoje não consigo dar essa resposta a vocês, afinal não vivo mais só de CA
 Devo falar de PLM, CAD... 
 
 Tecnologia? Com certeza!
+
+Sds,
+Kastner
