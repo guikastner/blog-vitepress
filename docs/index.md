@@ -3,6 +3,7 @@ title: "📚 Blog do Kastner"
 ---
 
 <script setup>
+import { withBase } from 'vitepress'
 // Carrega metadados das páginas Markdown (inclui frontmatter)
 const modules = import.meta.glob('./posts/**/*.md', {
   eager: true,
@@ -79,7 +80,7 @@ const posts = Object.entries(modules)
 # 📝 Últimos Posts
 
 <div class="grid">
-  <a v-for="post in posts" :key="post.url" class="card" :href="post.url">
+  <a v-for="post in posts" :key="post.url" class="card" :href="withBase(post.url)">
     <div class="title">{{ post.frontmatter.title }}</div>
     <div class="date">{{ new Date(post.frontmatter.date).toLocaleDateString('pt-BR') }}</div>
     <div class="excerpt">{{ post.frontmatter.description || 'Sem descrição.' }}</div>

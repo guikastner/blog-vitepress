@@ -15,6 +15,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      CNAME: ${{ vars.CNAME || secrets.CNAME || '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,6 +33,11 @@ jobs:
       - name: Build site (VitePress)
         run: npm run docs:build
 
+      - name: Add CNAME (optional)
+        if: env.CNAME != ''
+        run: |
+          echo "$CNAME" > docs/.vitepress/dist/CNAME
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -38,4 +45,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: docs/.vitepress/dist
           force_orphan: true
-
