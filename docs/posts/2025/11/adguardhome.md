@@ -1,5 +1,5 @@
 ---
-title: "Ad Guard Home"
+title: "AdGuard Home"
 date: 2025-11-03
 description: "Quando um blog que eu amava me irritou completamente"
 tags: ["tecnologia", "self hosting", "orangepi"]
